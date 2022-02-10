@@ -4,30 +4,46 @@
 	<title>Geil</title>
 	<meta charset="utf-8">
 </head>
-<body bgcolor="cyan" >
+<body bgcolor="white" >
 	<style>
-		#gh1 {
-			background-color: greenyellow;
-			width: 100px ;
-			height:	30px ;
+		BODY {
+    background: url(bg.jpg) no-repeat -200px -100px; /* Параметры фона */
+   }
+		#gh2{
+			color: aliceblue;
+		}
+		button {
+			background-color: green;
+			border-radius: 50px ;
+			width: 300px ;
+			height:	100px ;
+			transition: all 300ms ease;
+		}button:hover{
+			background-color: yellowgreen;
+			width: 350px ;
+			height:	120px ;
+			border-radius: 100px ;
+			
 		}
 		#geil1 {
 			width: 300px ;
 			height:	80px ;
-			background-color: cyan ;
+			background-color: cyan;
 		}
 	</style>
-	<header  align="center" ><h1>Geil</h1></header>
-	<article align="center" bgcolor="green" >
+	<header id="gh2"  align="center" ><h1>Geil</h1></header>
+	<article id="gh2" align="center" bgcolor="green" ><h2>
 	
 			У нас появилась игра в БЕТА версии!<br/>
 			1. Скачайте архив в удобную папку.<br/>
 			2. Разархивируйте его и запустите DIE1.<br/>
 			3. Все! Играйте!<br/>
-			<a href="diePCv1.zip" download="die1">
-	<button id="gh1"  >Скачать игру</button>
+		<br/>
+		<br/>
+			<a class="button" id="gh1" href="diePCv1.zip" download="die1">
+				<button><h2>Скачать игру<br/>WINDOWS</h2></button>
 </a><br/>
 		
-	</article>
+	</h2></article>
 </body>
 </html>
