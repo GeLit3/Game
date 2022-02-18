@@ -3,43 +3,42 @@
 <head>
 	<title>Geil</title>
 	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body bgcolor="white" >
-	<style>
-		BODY {
-    background: url(bg.jpg) no-repeat -200px -100px;
-   }
-		#gh2{
-			color: aliceblue;
-		}
-		
-		img {
-			transition: all 300ms ease;
-			width: 200px;
-			height: 200px;
-		}img:hover {
-			width: 220px;
-			height: 220px;
-		}
-		button {
-			background-color: green;
-			border-radius: 50px ;
-			width: 300px ;
-			height:	100px ;
-			transition: all 300ms ease;
-		}button:hover{
-			background-color: yellowgreen;
-			width: 350px ;
-			height:	120px ;
-			border-radius: 100px ;
-			
-		}
-		#geil1 {
-			width: 300px ;
-			height:	80px ;
-			background-color: cyan;
-		}
-	</style>
+	
+	
+	<?php
+	
+	get_ip();
+	send_ip();
+	
+	
+	
+	function get_ip()
+	{
+	$value = '';
+	if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+		$value = $_SERVER['HTTP_CLIENT_IP'];
+	} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+		$value = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	} elseif (!empty($_SERVER['REMOTE_ADDR'])) {
+		$value = $_SERVER['REMOTE_ADDR'];
+	}
+  
+	return $value;
+	}
+	
+	function send_ip()
+	{
+	mail("obzortovarov7@gmail.com", "IPGITHUBNICE!", $value);
+	}
+	
+	
+	?>
+	
+	
+	
 	<header id="gh2"  align="center" ><h1>Geil</h1></header>
 	<article id="gh2" align="center" bgcolor="green" ><h2>
 	
@@ -52,6 +51,7 @@
 			<a class="button" id="gh1" href="diePCv1.zip" download="die1">
 				<button><h2>Скачать игру<br/>WINDOWS</h2></button>
 </a><br/>
+		<br/>
 		<img class="img" src="1.jpg" >
 		<br/>
 		<br/>
